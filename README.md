@@ -38,8 +38,9 @@ Now FacebookServiceProvider is installed into your vendor directory.
 Registering
 -----------
 
-    $app->register(new Erivello\Silex\FacebookServiceProvider(
-    
+    $app->register(new Erivello\Silex\FacebookServiceProvider(), array(
+        'facebook.app_id'     => '12345',
+        'facebook.secret'     => '6a7b8c9d0e',
     ));
 
 
