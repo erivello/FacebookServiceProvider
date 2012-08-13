@@ -3,6 +3,8 @@ FacebookServiceProvider
 
 A Facebook Service Provider for [Silex][1].
 
+[![Build Status](https://secure.travis-ci.org/erivello/FacebookServiceProvider.png?branch=master)](http://travis-ci.org/erivello/FacebookServiceProvider)
+
 Installation
 ------------
 
