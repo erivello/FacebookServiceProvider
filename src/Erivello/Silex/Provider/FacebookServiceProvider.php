@@ -26,14 +26,17 @@ class FacebookServiceProvider implements ServiceProviderInterface
      */
     public function register(Application $app)
     {
-        $app['facebook'] = $app->share(function() use ($app) {
+        $app->before(function() use ($app) {
+            foreach ($app['facebook.apps'] as $label => $facebookApp) {
 
-            $facebook = new \Facebook(array(
-                'appId' => $app['facebook.app_id'],
-                'secret' => $app['facebook.secret'],
-            ));
+                $app['facebook_' . $label] = $app->share(function() use ($facebookApp) {
+                    return new \Facebook(array(
+                        'appId' => $facebookApp['facebook.app_id'],
+                        'secret' => $facebookApp['facebook.secret'],
+                    ));
+                });
 
-            return $facebook;
+            }
         });
     }
     
