@@ -41,8 +41,16 @@ Registering
 -----------
 
     $app->register(new Erivello\Silex\FacebookServiceProvider(), array(
-        'facebook.app_id'     => '12345',
-        'facebook.secret'     => '6a7b8c9d0e',
+        'facebook.apps' => array(
+            'application one' => array(
+                'facebook.app_id'     => '12345',
+                'facebook.secret'     => '67890'
+            ),
+            'application two' => array(
+                'facebook.app_id'     => '54321',
+                'facebook.secret'     => '09876'
+            ),
+        )
     ));
 
 
