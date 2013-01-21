@@ -24,7 +24,7 @@ Or [download composer.phar][3] into the project root.
 
     "require": {
         "php": "> 5.3.3",
-        "erivello/facebook-service-provider": "dev-develop"
+        "erivello/facebook-service-provider": "dev-master"
     }
 
 ### Install Dependencies
